@@ -16,6 +16,9 @@
 		DD001360253E27700071FC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD00135E253E27700071FC2E /* LaunchScreen.storyboard */; };
 		DD00136B253E27700071FC2E /* PersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00136A253E27700071FC2E /* PersistencyTests.swift */; };
 		DD001376253E27700071FC2E /* PersistencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD001375253E27700071FC2E /* PersistencyUITests.swift */; };
+		DD001387253E2E4B0071FC2E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD001386253E2E4B0071FC2E /* MasterViewController.swift */; };
+		DD00138C253E30BB0071FC2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00138B253E30BB0071FC2E /* DetailViewController.swift */; };
+		DD001391253E30E60071FC2E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD001390253E30E60071FC2E /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		DD001371253E27700071FC2E /* PersistencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD001375253E27700071FC2E /* PersistencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyUITests.swift; sourceTree = "<group>"; };
 		DD001377253E27700071FC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD001386253E2E4B0071FC2E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		DD00138B253E30BB0071FC2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DD001390253E30E60071FC2E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +111,13 @@
 				DD001352253E276D0071FC2E /* SceneDelegate.swift */,
 				DD001354253E276D0071FC2E /* ViewController.swift */,
 				DD001356253E276D0071FC2E /* Main.storyboard */,
+				DD001390253E30E60071FC2E /* EditViewController.swift */,
 				DD00135C253E27700071FC2E /* Assets.xcassets */,
 				DD00135E253E27700071FC2E /* LaunchScreen.storyboard */,
 				DD001361253E27700071FC2E /* Info.plist */,
 				DD001359253E276D0071FC2E /* Persistency.xcdatamodeld */,
+				DD001386253E2E4B0071FC2E /* MasterViewController.swift */,
+				DD00138B253E30BB0071FC2E /* DetailViewController.swift */,
 			);
 			path = Persistency;
 			sourceTree = "<group>";
@@ -261,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD001387253E2E4B0071FC2E /* MasterViewController.swift in Sources */,
 				DD001355253E276D0071FC2E /* ViewController.swift in Sources */,
 				DD00135B253E276D0071FC2E /* Persistency.xcdatamodeld in Sources */,
+				DD00138C253E30BB0071FC2E /* DetailViewController.swift in Sources */,
 				DD001351253E276D0071FC2E /* AppDelegate.swift in Sources */,
 				DD001353253E276D0071FC2E /* SceneDelegate.swift in Sources */,
+				DD001391253E30E60071FC2E /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

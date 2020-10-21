@@ -11,10 +11,17 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+//    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        if let rootVC = self.window?.rootViewController as? MasterViewController {
+//            rootVC.persistentContainer = persistentContainer
+//        }
+//        print(self.window?.description ?? "No window found")
+//        print(self.window?.rootViewController?.description ?? "No RootViewController found")
+        
         return true
     }
 
