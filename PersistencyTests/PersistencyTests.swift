@@ -22,6 +22,25 @@ class PersistencyTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testSaveAndLoadStringArray(){
+        let delegate = UIApplication.shared.delegate as! AppDelegate;
+        let myStringArray = ["Eins", "Zwei", "Drölf"]
+        delegate.saveStringArray(myStringArray);
+        let loadedStringArray = delegate.loadStringArray()
+        
+        XCTAssertEqual(myStringArray, loadedStringArray)
+        
+    }
+    
+    func testStringArrayComparison(){
+        let array1 = ["Eins","Zwei"]
+        let array2 = ["42", "The answer to everything"]
+        
+        XCTAssertNotEqual(array1, array2)
+    }
+    
+    
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

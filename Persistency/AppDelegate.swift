@@ -83,6 +83,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func saveStringArray(_ array: [String]){
+        do{
+            try (array as NSArray).write(to: arrayFileURL())
+        } catch {
+            print("Error: Could not write File")
+        }
+    }
+    
+    func loadStringArray() -> [String]{
+        
+        let readArray = NSArray(contentsOf: arrayFileURL())
+        return readArray as! [String]
+        
+    }
+    
+    func arrayFileURL() -> URL {
+        let manager = FileManager.default
+        let directories = manager.urls( for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = directories.first!;
+        let filePath = documentDirectory.appendingPathComponent("MyFile.dat")
+        print(filePath)
+        return filePath
+    }
 
 }
 

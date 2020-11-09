@@ -20,14 +20,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.persistentContainer  = (UIApplication.shared.delegate as! AppDelegate).persistentContainer;
         
         initializeFetchedResultsController()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData();
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -199,8 +202,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let person = Person(context: self.persistentContainer.viewContext)
             person.name = ""
             evc.persistentContainer = self.persistentContainer
-            print(person)
             evc.persistencyPerson = person
+            evc.didSaveCallback = {
+                self.tableView.reloadData();
+            }
         }
         
 

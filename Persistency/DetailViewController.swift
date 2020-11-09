@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     var persistentContainer: NSPersistentContainer!
     var persistencyPerson : Persistency.Person!
 
+    @IBOutlet weak var labelAppearanceCounter: UILabel!
     
     @IBOutlet weak var labelName: UILabel!
     
@@ -28,6 +29,15 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         labelName.text = persistencyPerson.name;
+        updateAppearanceCount()
+    }
+    
+    func updateAppearanceCount(){
+        let defaults = UserDefaults.standard
+        var count = defaults.integer(forKey: "DetailViewAppearanceCount")
+        count += 1;
+        self.labelAppearanceCounter.text = "Total View Appearance: " + count.description;
+        defaults.set(count, forKey: "DetailViewAppearanceCount")
     }
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
